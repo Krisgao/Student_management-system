@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Some Records</title>
+</head>
+
+<body>
+
+    <!-- <button id="click" class="button">Show Top 10 Info</button> -->
+    <div id="div1">
+        <select id="select">
+            <option value="Select number" selected="selected">Select number</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="All">All</option>
+        </select>
+    </div>
+    <div id="editModal">
+        <form>
+            <label for="index">Index: </label><br>
+            <input id = "index" name = "index" value = "" readonly><br>
+            <label for="firstname">Firstname:</label><br>
+            <input type="text" id="firstname" name="firstname" value="" required><br>
+            <label for="lastname">Lastname:</label><br>
+            <input type="text" id="lastname" name="lastname" value="" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="" required><br>
+            <label for="location">Location:</label><br>
+            <input type="text" id="location" name="location" value="" required><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" value="" required><br>
+            <label for="address1C">address(Communication):</label><br>
+            <input type="text" id="address1C" name="address1C" value="" required><br>
+            <label for="address2P">address(Permanent):</label><br>
+            <input type="text" id="address2P" name="address2P" value="" required><br>
+            <input type="submit" id="editSave" value="Save" onclick="editsubmit()">
+            <input type="button" id="editClose" value="Close" onclick="editclose()">
+        </form>
+    </div>
+    <div id="editModal1">
+        <form>
+            <label for="index">Index: </label><br>
+            <input id = "index1" name = "index1" value = "" readonly><br>
+            <label for="firstname">Firstname:</label><br>
+            <input type="text" id="firstname1" name="firstname1" value="" required><br>
+            <label for="lastname">Lastname:</label><br>
+            <input type="text" id="lastname1" name="lastname1" value="" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email1" name="email1" value="" required><br>
+            <label for="location">Location:</label><br>
+            <input type="text" id="location1" name="location1" value="" required><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone1" name="phone1" value="" required><br>
+            <label for="address1C">address(Communication):</label><br>
+            <input type="text" id="address1C1" name="address1C1" value="" required><br>
+            <label for="address2P">address(Permanent):</label><br>
+            <input type="text" id="address2P1" name="address2P1" value="" required><br>
+            <label id="thisLabel" for="marks">Marks(English):</label><br>
+            <input type="text" name="marks" id="thismarks" value="" required><br>
+            <label id="thisLabel1" for="marks">Marks(Science):</label><br>
+            <input type="text" name="marks" id="thismarks1" value="" required><br>
+            <label id="thisLabel2" for="marks">Marks(Computers):</label><br>
+            <input type="text" name="marks" id="thismarks2" value="" required><br>
+            <label id="thisLabel3" for="marks">Marks(hardware):</label><br>
+            <input type="text" name="marks" id="thismarks3" value="" required><br>
+            <input type="submit" id="editSave1" value="Save" onclick="editsubmit()">
+            <input type="button" id="editClose1" value="Close" onclick="editclose(); return false;">
+        </form>
+    </div>
+    <div id="editModal2">
+
+        <form>
+            <label for="toDel">Are you sure to remove this person's information? </label><br>
+            <input type = "hidden" id = "index2" name = "index2" value = "" readonly><br>
+            <input type="submit" id="delete" value="Delete" onclick="deleteSubmit()">
+            <input type="button" id="NotDelete" value="Cancel" onclick="cancel(); return false;">
+        </form>
+    </div>
+    <div id="editModal3">
+        <form>
+            <label for="newinfo">Please fill all info below: </label><br>
+            <label for="firstname">Firstname:</label><br>
+            <input type="text" id="newfirstname" name="newfirstname" value="" required><br>
+            <label for="lastname">Lastname:</label><br>
+            <input type="text" id="newlastname" name="newlastname" value="" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="newemail" name="newemail" value="" required><br>
+            <label for="location">Location:</label><br>
+            <!-- <input type="text" id="newlocation" name="newlocation" value="" required><br> -->
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                
+              </div>
+              <br>
+              <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Piscataway</p></div>
+                <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">Newyork</p></div>
+                    <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">California</p></div><br><br>
+            <label for="phone">Phone:</label><br>
+            <input type="phone" id="newphone" name="newphone" value="" required><br>
+            <label for="newaddress1C">address(Communication):</label><br>
+            <input type="text" id="newaddress1C" name="newaddress1C" value="" required><br>
+            <label for="address2P">address(Permanent):</label><br>
+            <input type="text" id="newaddress2P" name="newaddress2P" value="" required><br>
+            <label id="thisnewLabel" for="newmarks">Marks(English):</label><br>
+            <input type="text" name="newmarks" id="thisnewmarks" value="" required><br>
+            <label id="thisnewLabel1" for="marks">Marks(Science):</label><br>
+            <input type="text" name="newmarks" id="thisnewmarks1" value="" required><br>
+            <label id="thisnewLabel2" for="marks">Marks(Computers):</label><br>
+            <input type="text" name="newmarks" id="thisnewmarks2" value="" required><br>
+            <label id="thisnewLabel3" for="marks">Marks(hardware):</label><br>
+            <input type="text" name="marks" id="thisnewmarks3" value="" required><br>
+            <input type="submit" id="register" value="register" onclick="registerthis()">
+            <input type="button" id="notregister" value="Cancel" onclick="notRegister(); return false;">
+        </form>
+    </div>
+    <div id="ShowButton"><input id="showDetails" type="button" value="Show More Details" onclick="details()" /></div>
+    <div id="addButton"><input id="addNewone" type="button" value="Add New Student" onclick="add()" /></div>
+    <div class="container" style="padding:50px 250px;">
+        <form role="form">
+            <div class="form-group">
+              <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
+            </div>
+        </form>
+        <div id="filter-records"></div>
+      </div>
+    <div id="thisTable" onscroll="myscroll()">
+        
+    </div>
+    <div id="sampleright" class = "Nomore">
+        No more records on right side
+      </div>
+      <div id="samplebottom" class = "Nomore">
+        No more records
+      </div>
+    
+    
+
+    <div id="backGround"></div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
